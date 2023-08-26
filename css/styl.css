@@ -1,0 +1,233 @@
+/* global selectors */
+:root {
+  --main-color: #1e202b;
+  --secondary-color: #009ad8;
+  --footer-color: #262936;
+  --secondary-textColor: #bfc1c8;
+}
+.spinner-grow{
+  opacity: .9;
+}
+.active {
+  border: 2.5px solid var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
+}
+.search{
+  position: relative;
+}
+.search input[type="search"]{
+  background-color: var(--main-color);
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 30px 30px;
+  width: 100%;
+color: white;
+}
+.search button{
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  color: white;
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+/* navbar-------------------------------------------- */
+nav {
+  background-color: var(--main-color);
+}
+nav a {
+  color: white !important;
+  font-size: .875rem !important;
+}
+nav button, nav button i{
+  outline: none;
+
+  transition: ease-in-out .2s border,ease-in-out .2s color !important;
+}
+nav button:hover{
+  border:2px solid var(--secondary-color);
+
+}
+nav button:focus{
+box-shadow: none !important;
+}
+nav button:hover i{
+  color: var(--secondary-color) !important;
+
+}
+nav .logo figure {
+  width: 70px;
+  height: 43px;
+}
+
+nav .logo figcaption h1 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+nav .logo figcaption h6 {
+  font-size: 0.625rem;
+  font-weight: 300;
+  color: var(--secondary-textColor);
+}
+
+nav ul li {
+  /* background-color: green !important; */
+}
+nav ul li a {
+  border: 2.5px solid transparent !important;
+
+  transition: ease-in-out .5s border-color, ease-in-out .5s color  !important;
+}
+nav ul li a:hover {
+  border-color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
+}
+/* middle-------------------------------------------- */
+section{
+  background-image: url(../imgs/banner.png);
+  background-repeat: no-repeat;
+  background-color: var(--main-color);
+}
+section .search button{
+  padding: 10px 35px;
+}
+section .card{
+  color: var(--secondary-textColor);
+}
+section .card:nth-child(1),section .card:nth-child(3) {
+  background-color: var(--footer-color);
+}
+section .col-md-4:nth-child(2) .card{
+  background-color: var(--main-color);
+
+}
+
+section .card .body span{
+  color: var(--secondary-color);
+}
+section .card .body{
+  padding: .8rem;
+}
+section .card .body figure{
+  --size: 5.5rem;
+  width: var(--size);
+  height: var(--size);
+}
+section .card figcaption:not(figcaption:nth-child(3)){
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+section .card:nth-child(1) figcaption:nth-child(1){
+  font-size: 5.625rem;
+}
+
+section .card .header {
+  padding: .5rem;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+section .card .footer{
+  font-size: .875rem;
+}
+
+
+section .card .footer span{
+  --size: 1.25rem;
+  display: flex;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 4rem;
+}
+
+
+
+
+
+/* footer-------------------------------------------- */
+footer{
+  background-color: var(--footer-color);
+  color: var(--secondary-textColor);
+}
+
+footer ul li{
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+  background-color: var(--main-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  transition: ease-in .2s color, ease-in .2s background-color;
+}
+footer ul li:hover{
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+footer .search button{
+  font-size: .8rem;
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 991px) 
+{
+  .container{
+    max-width: 921px;
+  }
+  .active{
+    border: unset !important;
+  }
+  section .card .temp{
+    display: flex;
+    flex-direction: column;
+  }
+  section .card .temp :nth-child(1),   section .card .temp :nth-child(2){
+    margin-right: auto;
+  }
+
+  footer .container{
+    flex-direction: column;
+  }
+
+  nav div.navbar-collapse ul{
+    text-align: center;
+    background-color: var(--footer-color);
+    border-radius: 20px;
+  }
+  nav div.navbar-collapse ul li:not(nav div.navbar-collapse ul li:nth-last-child(1)){
+    border-bottom: .8px solid rgba(255, 255, 255, 0.2);
+  }
+  nav div.navbar-collapse ul li{
+    padding: 0px !important;
+  }
+nav ul li a:hover {
+  border-color: transparent !important;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+  section .card .temp{
+    flex-direction: unset;
+  }
+  section .card .temp :nth-child(1),   section .card .temp :nth-child(2){
+    margin-right: unset;
+  }
+  
+}

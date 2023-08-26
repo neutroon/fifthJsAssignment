@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styl.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg p-3">
+      <div class="container">
+        <a class="logo navbar-brand d-flex" href="#">
+          <figure class="me-3">
+            <img src="imgs/logo@2x.png" alt="logo" class="w-100" />
+          </figure>
+          <figcaption>
+            <h1>Weather</h1>
+            <h6>tagline goes here</h6>
+          </figcaption>
+        </a>
+
+        <button
+          class="navbar-toggler rounded-5 py-3 px-3"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+        <i class="fa fa-bars text-white"></i>
+          <!-- <span class="navbar-toggler-icon text-white bg-white"></span> -->
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item p-3">
+              <a
+                class="nav-link px-4 rounded-5 my-3 active"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link px-4 rounded-5 my-3" href="#">News</a>
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link px-4 rounded-5 my-3" href="#">Live Cameras</a>
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link px-4 rounded-5 my-3" href="#">Photos</a>
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link px-4 rounded-5 my-3" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="search py-4">
+          <input type="search" placeholder="Find your location..." />
+          <button>Find</button>
+        </div>
+
+
+
+
+  <div class="row g-0 position-relative">
+
+        <div class="spinner-grow text-info rounded-2 w-100 h-100  position-absolute translate-middle top-50 start-50 z-1" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 border-0 flex-grow-1">
+
+        <div class="header d-flex justify-content-between">
+          <span></span> <span></span>
+        </div>
+        <div class="body">
+          <h4></h4>
+          <div class="temp d-flex justify-content-between align-items-end">
+            <figcaption></figcaption>
+            <figure>
+              <img
+                class="w-100"
+                src=""
+                alt="weather"
+              />
+            </figure>
+          </div>
+          <span></span>
+        </div>
+        <div class="footer px-3 py-4 d-flex">
+          <span
+            ><img
+              src=""
+              class="me-2 w-100"
+              alt="umberella"
+            /></span
+          >
+          <span
+            ><img
+              src=""
+              class="me-2 w-100"
+              alt="wind"
+            /></span
+          >
+          <span
+            ><img
+              src=""
+              class="me-2 w-100"
+              alt="compass"
+            /></span
+          >
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4">
+
+      <div class="card h-100 border-0 flex-grow-1">
+
+        <div class="header d-flex justify-content-center">
+          <span></span>
+        </div>
+        <div class="body">
+          <div class="d-flex flex-column align-items-center">
+            <figure class="m-auto mb-4">
+              <img
+                class="w-100"
+                src=""
+                alt="weather"
+              />
+            </figure>
+            <figcaption class="text-center"></figcaption>
+            <figcaption class="text-center"></figcaption>
+            <span class="mt-4"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+
+      
+      <div class="card h-100 border-0 flex-grow-1">
+
+        <div class="header d-flex justify-content-center">
+          <span></span>
+        </div>
+        <div class="body">
+          <div class="d-flex flex-column align-items-center">
+            <figure class="m-auto mb-4">
+              <img
+                class="w-100"
+                src=""
+                alt="weather"
+              />
+            </figure>
+            <figcaption class="text-center"></figcaption>
+            <figcaption class="text-center"></figcaption>
+            <span class="mt-4"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      </div>
+    </section>
+
+    <footer class="px-3 py-5">
+      <div class="container d-flex justify-content-between">
+        <div class="left">
+          <div class="search mb-4">
+            <input
+              type="search"
+              placeholder="Enter your Email to subscribe..."
+            />
+            <button>Subscribe</button>
+          </div>
+          <p>
+            Copyright 2014 Company name. Designed by Themezy. All rights
+            reserved
+          </p>
+        </div>
+
+        <ul class="list-unstyled d-flex">
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-google-plus-g"></i></li>
+          <li><i class="fa-brands fa-pinterest"></i></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
