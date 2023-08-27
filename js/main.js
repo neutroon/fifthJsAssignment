@@ -21,7 +21,6 @@ const wind_dir = document.querySelector(
 ); // .current.wind_dir
 const loooooding = document.querySelector(".spinner-grow");
 
-
 const weekDays = [
   "Sunday",
   "Monday",
@@ -54,7 +53,7 @@ if (navigator.geolocation) {
 // functions ====================================================================================
 
 async function getData(loc = "cairo") {
-startLooding();
+  startLooding();
 
   const url = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=f241389e76b1460abbe01443232608&q=${loc}&days=3`
@@ -62,7 +61,7 @@ startLooding();
   allData = await url.json();
   console.log("end loooooding");
   displayData(allData);
-  endLooding()
+  endLooding();
 }
 
 function displayData(data) {
@@ -111,15 +110,17 @@ function error(err) {
   getData(); // when get error or user refused to give location function will called with defualt param
 }
 
-function startLooding(){
-    loooooding.classList.remove("d-none");
+function startLooding() {
+  loooooding.classList.remove("d-none");
 }
 
-function endLooding(){
-    loooooding.classList.add("d-none");
+function endLooding() {
+  loooooding.classList.add("d-none");
 }
 
 // events ====================================================================================
 search.addEventListener("keyup", function () {
-  getData(this.value);
+  if (this.value.length > 2) {
+    getData(this.value);
+  }
 });
